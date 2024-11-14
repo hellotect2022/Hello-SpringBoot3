@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dhhan</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -52,8 +52,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.codehaus.janino/janino -->
+		<dependency><!-- logback.xml 에서 <if> 조건문 붙이기 위한 라이브러리 -->
+			<groupId>org.codehaus.janino</groupId>
+			<artifactId>janino</artifactId>
+			<version>3.1.12</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 <!--			<plugin>-->

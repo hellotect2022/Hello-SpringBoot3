@@ -1,0 +1,57 @@
+[2024-11-14 18:01:36:2800] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-14 18:01:36:2801] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-14 18:01:36:2804] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'localeResolver'
+[2024-11-14 18:01:36:2806] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'themeResolver'
+[2024-11-14 18:01:36:2809] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'flashMapManager'
+[2024-11-14 18:01:36:2812] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcValidator'
+[2024-11-14 18:01:36:2814] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+[2024-11-14 18:01:36:2819] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+[2024-11-14 18:01:36:2822] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+[2024-11-14 18:01:36:2822] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-14 18:01:36:2822] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-14 18:01:36:2860] DEBUG 22308 --- [  restartedMain] _.s.w.s.HandlerMapping.Mappings      : 
+	c.d.d.c.TestController:
+	{GET [/test/error]}: error()
+	{GET [/test/hello]}: helloWorld()
+	{GET [/test/memory]}: showMemoryInfo()
+[2024-11-14 18:01:36:2869] DEBUG 22308 --- [  restartedMain] _.s.w.s.HandlerMapping.Mappings      : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+[2024-11-14 18:01:36:2882] DEBUG 22308 --- [  restartedMain] s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+[2024-11-14 18:01:36:2883] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcPatternParser'
+[2024-11-14 18:01:36:2884] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcUrlPathHelper'
+[2024-11-14 18:01:36:2885] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcPathMatcher'
+[2024-11-14 18:01:36:2886] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'viewControllerHandlerMapping'
+[2024-11-14 18:01:36:2887] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-14 18:01:36:2887] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-14 18:01:36:2888] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'beanNameHandlerMapping'
+[2024-11-14 18:01:36:2889] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-14 18:01:36:2889] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-14 18:01:36:2891] DEBUG 22308 --- [  restartedMain] _.s.w.s.HandlerMapping.Mappings      : 'beanNameHandlerMapping' {}
+[2024-11-14 18:01:36:2891] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'routerFunctionMapping'
+[2024-11-14 18:01:36:2892] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-14 18:01:36:2892] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-14 18:01:36:2893] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'messageConverters'
+[2024-11-14 18:01:36:2893] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration'
+[2024-11-14 18:01:36:2899] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'stringHttpMessageConverter'
+[2024-11-14 18:01:36:2899] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration'
+[2024-11-14 18:01:36:2900] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'stringHttpMessageConverter' via factory method to bean named 'environment'
+[2024-11-14 18:01:36:2904] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter'
+[2024-11-14 18:01:36:2905] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration'
+[2024-11-14 18:01:36:2906] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'jacksonObjectMapper'
+[2024-11-14 18:01:36:2906] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+[2024-11-14 18:01:36:2906] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+[2024-11-14 18:01:36:2907] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+[2024-11-14 18:01:36:2907] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+[2024-11-14 18:01:36:2908] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+[2024-11-14 18:01:36:2911] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+[2024-11-14 18:01:36:2913] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'parameterNamesModule'
+[2024-11-14 18:01:36:2914] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+[2024-11-14 18:01:36:2916] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'jsonMixinModule'
+[2024-11-14 18:01:36:2916] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+[2024-11-14 18:01:36:2917] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+[2024-11-14 18:01:36:2917] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26a9ae69'
+[2024-11-14 18:01:36:2917] DEBUG 22308 --- [  restartedMain] o.s.b.a.AutoConfigurationPackages    : @EnableAutoConfiguration was declared on a class in the package 'com.dhhan.demo'. Automatic @Repository and @Entity scanning is enabled.
+[2024-11-14 18:01:36:2923] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26a9ae69'
+[2024-11-14 18:01:36:2923] DEBUG 22308 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'

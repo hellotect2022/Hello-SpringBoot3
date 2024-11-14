@@ -1,0 +1,9 @@
+[2024-11-14 18:02:07:33327] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : List Item: com.dhhan.demo.dto.MemoryInfo@10c63c5b
+[2024-11-14 18:02:07:33328] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : List Item: com.dhhan.demo.dto.MemoryInfo@74919bf4
+[2024-11-14 18:02:07:33328] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : List Item: com.dhhan.demo.dto.MemoryInfo@27620196
+[2024-11-14 18:02:07:33328] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : ========== java.util.ArrayList ==========
+[2024-11-14 18:02:11:37098] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : List Item: {a=com.dhhan.demo.dto.MemoryInfo@2273ad0b, 1=aaa}
+[2024-11-14 18:02:11:37103] INFO  22308 --- [nio-8080-exec-2] c.d.demo.controller.TestController   : List Item: {}
+[2024-11-14 18:02:11:37135] DEBUG 22308 --- [nio-8080-exec-2] a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+[2024-11-14 18:02:11:37136] DEBUG 22308 --- [nio-8080-exec-2] a.RequestResponseBodyMethodProcessor : Writing [com.dhhan.demo.dto.response.CustomResponse@697ded92]
+[2024-11-14 18:02:11:37149] DEBUG 22308 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet    : Completed 200 OK
