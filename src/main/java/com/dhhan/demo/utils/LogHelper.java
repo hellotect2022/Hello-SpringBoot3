@@ -27,31 +27,7 @@ public class LogHelper {
         Logger LOGGER = LoggerFactory.getLogger(ref.getClass());
         if (obj != null) {
             LOGGER.info("========== {} ==========", obj.getClass().getName());
-            if (obj instanceof Map) {
-                Map<?, ?> map = (Map<?, ?>) obj; // Map으로 타입 캐스팅
-                StringBuilder str= new StringBuilder();
-                for (Map.Entry<?, ?> entry : map.entrySet()) {
-                    Object key = entry.getKey();
-                    Object value = entry.getValue();
-                    str.append(key).append(": ").append(value).append(", "); // 필드 이름과 값 출력
-                }
-                LOGGER.info("{{}}", str);
-            }else if (obj instanceof List) {
-                List<?> list = (List<?>) obj; // List로 타입 캐스팅
-                for (Object item : list) {
-                    LOGGER.info("List Item: {}", item);
-                }
-            }else {
-                Field[] fields = obj.getClass().getDeclaredFields();
-                StringBuilder str= new StringBuilder();
-                for (Field field : fields) {
-                    field.setAccessible(true); // private 필드 접근
-                    String fieldName = field.getName();
-                    Object fieldValue = field.get(obj);
-                    str.append(fieldName).append(": ").append(fieldValue).append(", "); // 필드 이름과 값 출력
-                }
-                LOGGER.info("{{}}", str);
-            }
+            LOGGER.info("{}",checkObject(obj));
         }
     }
 
@@ -62,10 +38,65 @@ public class LogHelper {
         LOGGER.error(stackTraces2[1].toString());
 
 
-        LOGGER.error("Error occurred:", e.toString());
-        int loop  = e.getStackTrace().length > 8 ? 8: e.getStackTrace().length;
+        LOGGER.error("Error occurred: {}", e.getMessage());
+        int loop  = e.getStackTrace().length;
+                //> 10 ? 10: e.getStackTrace().length;
         for (int i = 0; i < loop; i++) {
             LOGGER.error("-> " + e.getStackTrace()[i]);
         }
+    }
+
+
+
+
+    private static String checkObject(Object obj) throws IllegalAccessException {
+        if (obj instanceof Map) {
+            return encloseMap(obj);
+        }else if (obj instanceof List) {
+            return encloseList(obj);
+        }else {
+            return encloseObject(obj);
+        }
+    }
+
+    private static String encloseMap(Object obj) throws IllegalAccessException {
+            Map<?, ?> map = (Map<?, ?>) obj; // Map으로 타입 캐스팅
+            StringBuilder str= new StringBuilder();
+            str.append("List Item: {");
+            for (Map.Entry<?, ?> entry : map.entrySet()) {
+                Object key = entry.getKey();
+                String value = checkObject(entry.getValue());
+                str.append(key).append(": ").append(value).append(", "); // 필드 이름과 값 출력
+            }
+            str.append("}");
+            return str.toString();
+    }
+
+    private static String encloseList(Object obj) throws IllegalAccessException {
+        List<?> list = (List<?>) obj; // List로 타입 캐스팅
+        StringBuilder str= new StringBuilder();
+        str.append("List Item: {");
+        for (Object item : list) {
+            str.append(checkObject(item)).append(", ");
+        }
+        str.append("}");
+        return str.toString();
+    }
+
+    private static String encloseObject(Object obj) throws IllegalAccessException {
+        if (obj.getClass().getPackage().getName().endsWith(".dto")) {
+            Field[] fields = obj.getClass().getDeclaredFields();
+            StringBuilder str= new StringBuilder();
+            str.append("{");
+            for (Field field : fields) {
+                field.setAccessible(true); // private 필드 접근
+                String fieldName = field.getName();
+                Object fieldValue = field.get(obj);
+                str.append(fieldName).append(": ").append(fieldValue).append(", "); // 필드 이름과 값 출력
+            }
+            str.append("}");
+            return str.toString();
+        }
+        return obj.toString();
     }
 }

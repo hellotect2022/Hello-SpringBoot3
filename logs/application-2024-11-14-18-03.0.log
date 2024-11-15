@@ -1,0 +1,11 @@
+[2024-11-14 18:03:11:97785] DEBUG 22308 --- [ionShutdownHook] o.s.b.a.ApplicationAvailabilityBean  : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2024-11-14 18:03:11:97786] DEBUG 22308 --- [ionShutdownHook] igServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26a9ae69, started on Thu Nov 14 18:01:35 KST 2024
+[2024-11-14 18:03:11:97788] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147483647
+[2024-11-14 18:03:11:97788] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'applicationTaskExecutor' completed its stop procedure
+[2024-11-14 18:03:11:97793] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147482623
+[2024-11-14 18:03:11:97793] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerGracefulShutdown' completed its stop procedure
+[2024-11-14 18:03:11:97793] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147481599
+[2024-11-14 18:03:11:97851] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerStartStop' completed its stop procedure
+[2024-11-14 18:03:11:97851] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase -2147483647
+[2024-11-14 18:03:11:97851] DEBUG 22308 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'springBootLoggingLifecycle' completed its stop procedure
+[2024-11-14 18:03:11:97852] DEBUG 22308 --- [ionShutdownHook] o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'

@@ -22,8 +22,6 @@ public class TestController {
 
     @GetMapping("/memory")
     public @ResponseBody CustomResponse showMemoryInfo() throws IllegalAccessException {
-
-
         MemoryInfo test0 = new MemoryInfo(Runtime.getRuntime());
         HashMap<String, Object> test00 = new HashMap<String, Object>();
         test00.put("a", new MemoryInfo(Runtime.getRuntime()));
@@ -48,9 +46,8 @@ public class TestController {
         LogHelper.info(test00,this);
         LogHelper.info(test1,this);
         LogHelper.info(test2,this);
-
-
         return new CustomResponse(CustomStatus.SUCCESS,test0);
+
     }
 
     @GetMapping("/error")

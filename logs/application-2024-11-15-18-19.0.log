@@ -1,0 +1,16 @@
+[2024-11-15 18:19:03:916514] INFO  15596 --- [omcat-handler-3] c.d.demo.controller.TestController   : List Item: {a: {maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, 1: aaa, }
+[2024-11-15 18:19:03:916516] INFO  15596 --- [omcat-handler-3] c.d.demo.controller.TestController   : ========== java.util.ArrayList ==========
+[2024-11-15 18:19:29:942063] INFO  15596 --- [omcat-handler-3] c.d.demo.controller.TestController   : List Item: {{maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, {maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, {maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, }
+[2024-11-15 18:19:29:942063] INFO  15596 --- [omcat-handler-3] c.d.demo.controller.TestController   : ========== java.util.ArrayList ==========
+[2024-11-15 18:19:31:944564] INFO  15596 --- [omcat-handler-3] c.d.demo.controller.TestController   : List Item: {List Item: {a: {maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, 1: aaa, }, List Item: {a: {maxMemory: 4022, allocatedMemory: 48, freeMemory: 16, }, 1: aaa, }, }
+[2024-11-15 18:19:31:944565] DEBUG 15596 --- [omcat-handler-3] a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+[2024-11-15 18:19:31:944565] DEBUG 15596 --- [omcat-handler-3] a.RequestResponseBodyMethodProcessor : Writing [com.dhhan.demo.dto.response.CustomResponse@76660aa4]
+[2024-11-15 18:19:31:944566] DEBUG 15596 --- [omcat-handler-3] o.s.web.servlet.DispatcherServlet    : Completed 200 OK
+[2024-11-15 18:19:55:968437] DEBUG 15596 --- [ionShutdownHook] o.s.b.a.ApplicationAvailabilityBean  : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2024-11-15 18:19:55:968437] DEBUG 15596 --- [ionShutdownHook] igServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a7a211d, started on Fri Nov 15 18:03:48 KST 2024
+[2024-11-15 18:19:55:968438] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147482623
+[2024-11-15 18:19:55:968439] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerGracefulShutdown' completed its stop procedure
+[2024-11-15 18:19:55:968439] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147481599
+[2024-11-15 18:19:55:968486] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerStartStop' completed its stop procedure
+[2024-11-15 18:19:55:968486] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase -2147483647
+[2024-11-15 18:19:55:968486] DEBUG 15596 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'springBootLoggingLifecycle' completed its stop procedure

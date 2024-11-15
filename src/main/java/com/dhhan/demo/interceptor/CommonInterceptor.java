@@ -13,10 +13,11 @@ import java.util.logging.Logger;
 public class CommonInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+//        if (request.getRequestURI().equals("/favicon.ico")) {
+//            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+//            return false;
+//        }
 
-        LogHelper.debug("testtesttest",this);
-        LogHelper.info("infotesttest",this);
-        //if (false) throw new Exception("handler 에서 에러반환함");
         return true;
     }
 }
