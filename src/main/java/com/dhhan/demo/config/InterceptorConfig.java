@@ -1,5 +1,6 @@
-package com.dhhan.demo.interceptor;
+package com.dhhan.demo.config;
 
+import com.dhhan.demo.interceptor.CommonInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

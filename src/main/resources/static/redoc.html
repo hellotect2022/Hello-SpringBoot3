@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redoc API Documentation</title>
+    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+</head>
+<body>
+<a href="/swagger-ui" target="_blank" style="position: absolute; top: 10px; right: 10px;">Swagger UI</a>
+
+<div id="redoc-container" style="width: 100%; height: 100vh;"></div>
+<script>
+        Redoc.init('/v1/api-docs', {}, document.getElementById('redoc-container'));
+    </script>
+</body>
+</html>

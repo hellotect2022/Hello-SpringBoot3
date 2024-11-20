@@ -1,0 +1,68 @@
+[2024-11-20 17:55:49:2721] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.webmvc.ui.SwaggerConfig'
+[2024-11-20 17:55:49:2724] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.core.properties.SwaggerUiConfigParameters'
+[2024-11-20 17:55:49:2726] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.core.properties.SwaggerUiConfigProperties'
+[2024-11-20 17:55:49:2731] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'org.springdoc.core.properties.SwaggerUiConfigParameters' via constructor to bean named 'org.springdoc.core.properties.SwaggerUiConfigProperties'
+[2024-11-20 17:55:49:2742] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'indexPageTransformer'
+[2024-11-20 17:55:49:2742] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.core.properties.SwaggerUiOAuthProperties'
+[2024-11-20 17:55:49:2744] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'swaggerWelcome'
+[2024-11-20 17:55:49:2745] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.core.properties.SpringDocConfigProperties'
+[2024-11-20 17:55:49:2749] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'springWebProvider'
+[2024-11-20 17:55:49:2749] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.webmvc.core.configuration.SpringDocWebMvcConfiguration'
+[2024-11-20 17:55:49:2753] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWelcome' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigProperties'
+[2024-11-20 17:55:49:2753] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWelcome' via factory method to bean named 'org.springdoc.core.properties.SpringDocConfigProperties'
+[2024-11-20 17:55:49:2753] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWelcome' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigParameters'
+[2024-11-20 17:55:49:2753] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWelcome' via factory method to bean named 'springWebProvider'
+[2024-11-20 17:55:49:2788] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'springdocObjectMapperProvider'
+[2024-11-20 17:55:49:2789] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'org.springdoc.core.configuration.SpringDocConfiguration'
+[2024-11-20 17:55:49:2792] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'springdocObjectMapperProvider' via factory method to bean named 'org.springdoc.core.properties.SpringDocConfigProperties'
+[2024-11-20 17:55:49:2806] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'indexPageTransformer' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigProperties'
+[2024-11-20 17:55:49:2806] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'indexPageTransformer' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiOAuthProperties'
+[2024-11-20 17:55:49:2807] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'indexPageTransformer' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigParameters'
+[2024-11-20 17:55:49:2807] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'indexPageTransformer' via factory method to bean named 'swaggerWelcome'
+[2024-11-20 17:55:49:2807] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'indexPageTransformer' via factory method to bean named 'springdocObjectMapperProvider'
+[2024-11-20 17:55:49:2810] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'swaggerResourceResolver'
+[2024-11-20 17:55:49:2810] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerResourceResolver' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigProperties'
+[2024-11-20 17:55:49:2811] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWebMvcConfigurer' via factory method to bean named 'org.springdoc.core.properties.SwaggerUiConfigParameters'
+[2024-11-20 17:55:49:2811] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWebMvcConfigurer' via factory method to bean named 'indexPageTransformer'
+[2024-11-20 17:55:49:2811] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'swaggerWebMvcConfigurer' via factory method to bean named 'swaggerResourceResolver'
+[2024-11-20 17:55:49:2813] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'welcomePageHandlerMapping'
+[2024-11-20 17:55:49:2813] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcConversionService'
+[2024-11-20 17:55:49:2815] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcResourceUrlProvider'
+[2024-11-20 17:55:49:2817] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@611627e7'
+[2024-11-20 17:55:49:2817] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-20 17:55:49:2817] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-20 17:55:49:2827] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'welcomePageNotAcceptableHandlerMapping'
+[2024-11-20 17:55:49:2827] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@611627e7'
+[2024-11-20 17:55:49:2828] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcConversionService'
+[2024-11-20 17:55:49:2828] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+[2024-11-20 17:55:49:2829] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'localeResolver'
+[2024-11-20 17:55:49:2831] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'themeResolver'
+[2024-11-20 17:55:49:2832] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'flashMapManager'
+[2024-11-20 17:55:49:2834] DEBUG 41716 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory : Creating shared instance of singleton bean 'mvcValidator'
+[2024-11-20 17:55:49:2838] DEBUG 41716 --- [  restartedMain] o.s.v.b.OptionalValidatorFactoryBean : Failed to set up a Bean Validation provider
+jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:270)
+	at org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean.afterPropertiesSet(OptionalValidatorFactoryBean.java:39)
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.afterPropertiesSet(ValidatorAdapter.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.dhhan.demo.DemoApplication.main(DemoApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
