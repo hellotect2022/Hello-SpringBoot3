@@ -23,7 +23,7 @@ public class LogHelper {
         LOGGER.info(marker,"({}) # {}", ref.getClass().getName(),msg);
     }
 
-    public static void info(Object obj, Object ref) throws IllegalAccessException {
+    public static void info(Object obj, Object ref) {
         Logger LOGGER = LoggerFactory.getLogger(ref.getClass());
         if (obj != null) {
             LOGGER.info("========== {} ==========", obj.getClass().getName());
@@ -49,7 +49,7 @@ public class LogHelper {
 
 
 
-    private static String checkObject(Object obj) throws IllegalAccessException {
+    private static String checkObject(Object obj) {
         if (obj instanceof Map) {
             return encloseMap(obj);
         }else if (obj instanceof List) {
@@ -59,7 +59,7 @@ public class LogHelper {
         }
     }
 
-    private static String encloseMap(Object obj) throws IllegalAccessException {
+    private static String encloseMap(Object obj) {
             Map<?, ?> map = (Map<?, ?>) obj; // Map으로 타입 캐스팅
             StringBuilder str= new StringBuilder();
             str.append("List Item: {");
@@ -72,7 +72,7 @@ public class LogHelper {
             return str.toString();
     }
 
-    private static String encloseList(Object obj) throws IllegalAccessException {
+    private static String encloseList(Object obj) {
         List<?> list = (List<?>) obj; // List로 타입 캐스팅
         StringBuilder str= new StringBuilder();
         str.append("List Item: {");
@@ -83,7 +83,7 @@ public class LogHelper {
         return str.toString();
     }
 
-    private static String encloseObject(Object obj) throws IllegalAccessException {
+    private static String encloseObject(Object obj) {
         if (obj.getClass().getPackage().getName().endsWith(".dto")) {
             Field[] fields = obj.getClass().getDeclaredFields();
             StringBuilder str= new StringBuilder();
@@ -91,7 +91,12 @@ public class LogHelper {
             for (Field field : fields) {
                 field.setAccessible(true); // private 필드 접근
                 String fieldName = field.getName();
-                Object fieldValue = field.get(obj);
+                Object fieldValue = null;
+                try {
+                    fieldValue = field.get(obj);
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
                 str.append(fieldName).append(": ").append(fieldValue).append(", "); // 필드 이름과 값 출력
             }
             str.append("}");

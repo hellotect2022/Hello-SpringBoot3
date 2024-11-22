@@ -1,0 +1,62 @@
+[2024-11-20 17:56:28:41421] INFO  41716 --- [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-11-20 17:56:28:41422] INFO  41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Initializing Servlet 'dispatcherServlet'
+[2024-11-20 17:56:28:41423] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Detected StandardServletMultipartResolver
+[2024-11-20 17:56:28:41423] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Detected AcceptHeaderLocaleResolver
+[2024-11-20 17:56:28:41423] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Detected FixedThemeResolver
+[2024-11-20 17:56:28:41425] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55b05b49
+[2024-11-20 17:56:28:41430] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Detected org.springframework.web.servlet.support.SessionFlashMapManager@66736ab8
+[2024-11-20 17:56:28:41430] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-11-20 17:56:28:41430] INFO  41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Completed initialization in 7 ms
+[2024-11-20 17:56:28:41437] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : GET "/redoc.html", parameters={}
+[2024-11-20 17:56:28:41446] DEBUG 41716 --- [omcat-handler-0] o.s.w.s.h.SimpleUrlHandlerMapping    : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-11-20 17:56:28:41480] DEBUG 41716 --- [omcat-handler-0] o.s.web.servlet.DispatcherServlet    : Completed 200 OK
+[2024-11-20 17:56:28:41527] DEBUG 41716 --- [omcat-handler-1] o.s.web.servlet.DispatcherServlet    : GET "/v1/api-docs", parameters={}
+[2024-11-20 17:56:28:41529] DEBUG 41716 --- [omcat-handler-1] s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+[2024-11-20 17:56:28:41547] DEBUG 41716 --- [omcat-handler-1] .c.e.PropertySourcesPropertyResolver : Found key 'springdoc.api-docs.path' in PropertySource 'environmentProperties' with value of type String
+[2024-11-20 17:56:28:41593] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41612] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41693] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41706] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41708] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41711] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41712] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41714] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41715] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41716] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41749] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41750] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41751] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41752] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41753] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41762] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41762] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41764] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41765] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41765] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41779] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41780] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41781] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41782] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41783] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41788] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class java.lang.String
+[2024-11-20 17:56:28:41796] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve class com.dhhan.demo.dto.response.CustomResponse
+[2024-11-20 17:56:28:41797] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomStatus]
+[2024-11-20 17:56:28:41798] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.Object]
+[2024-11-20 17:56:28:41799] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class com.dhhan.demo.dto.type.CustomErrorCode]
+[2024-11-20 17:56:28:41800] DEBUG 41716 --- [omcat-handler-1] i.s.v.c.c.ModelConverterContextImpl  : resolve [simple type, class java.lang.String]
+[2024-11-20 17:56:28:41815] INFO  41716 --- [omcat-handler-1] o.s.api.AbstractOpenApiResource      : Init duration for springdoc-openapi is: 261 ms
+[2024-11-20 17:56:28:41841] DEBUG 41716 --- [omcat-handler-1] a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+[2024-11-20 17:56:28:41844] DEBUG 41716 --- [omcat-handler-1] a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+[2024-11-20 17:56:28:41846] DEBUG 41716 --- [omcat-handler-1] o.s.web.servlet.DispatcherServlet    : Completed 200 OK
+[2024-11-20 17:56:55:68965] DEBUG 41716 --- [omcat-handler-2] o.s.web.servlet.DispatcherServlet    : GET "/redoc", parameters={}
+[2024-11-20 17:56:55:68966] DEBUG 41716 --- [omcat-handler-2] o.s.w.s.h.SimpleUrlHandlerMapping    : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-11-20 17:56:55:68968] DEBUG 41716 --- [omcat-handler-2] o.s.w.s.r.ResourceHttpRequestHandler : Resource not found
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : com.dhhan.demo.utils.LogHelper.error(LogHelper.java:36)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : com.dhhan.demo.aop.ControllerErrorAdivce.handleException(ControllerErrorAdivce.java:17)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : Error occurred: No static resource redoc.
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+[2024-11-20 17:56:55:68971] ERROR 41716 --- [omcat-handler-2] com.dhhan.demo.utils.LogHelper       : -> org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)

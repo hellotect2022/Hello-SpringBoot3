@@ -1,5 +1,6 @@
 package com.dhhan.demo.controller;
 
+import com.dhhan.demo.controller.openapi.SampleInterfaceOpenApi;
 import com.dhhan.demo.dto.MemoryInfo;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
@@ -15,14 +16,14 @@ import java.util.HashMap;
 
 @RestController
 @RequestMapping("/sample")
-public class SampleController {
+public class SampleController implements SampleInterfaceOpenApi {
     @GetMapping("/hello/{number}")
     public CustomResponse helloWorld(@PathVariable String number) {
         return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!"+number);
     }
 
     @GetMapping("/memory")
-    public @ResponseBody CustomResponse showMemoryInfo() throws IllegalAccessException {
+    public @ResponseBody CustomResponse showMemoryInfo() {
         MemoryInfo test0 = new MemoryInfo(Runtime.getRuntime());
         HashMap<String, Object> test00 = new HashMap<String, Object>();
         test00.put("a", new MemoryInfo(Runtime.getRuntime()));
@@ -52,8 +53,8 @@ public class SampleController {
     }
 
     @GetMapping("/error")
-    public @ResponseBody void error() throws Exception {
-        throw new Exception();
+    public void error() {
+        throw new RuntimeException();
     }
 
 }
