@@ -2,14 +2,11 @@ package com.dhhan.demo.controller;
 
 import com.dhhan.demo.controller.openapi.SampleInterfaceOpenApi;
 import com.dhhan.demo.dto.MemoryInfo;
+import com.dhhan.demo.dto.SampleDTO;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
 import com.dhhan.demo.utils.LogHelper;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,8 +19,14 @@ public class SampleController implements SampleInterfaceOpenApi {
         return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!"+number);
     }
 
+    @PostMapping("/hello2")
+    public CustomResponse helloWorld2(@RequestBody SampleDTO sampleDTO) {
+        return new CustomResponse(CustomStatus.SUCCESS,sampleDTO);
+    }
+
     @GetMapping("/memory")
     public @ResponseBody CustomResponse showMemoryInfo() {
+
         MemoryInfo test0 = new MemoryInfo(Runtime.getRuntime());
         HashMap<String, Object> test00 = new HashMap<String, Object>();
         test00.put("a", new MemoryInfo(Runtime.getRuntime()));
