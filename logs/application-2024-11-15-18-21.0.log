@@ -1,8 +1,0 @@
-[2024-11-15 18:21:06:66893] DEBUG 17100 --- [ionShutdownHook] o.s.b.a.ApplicationAvailabilityBean  : Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
-[2024-11-15 18:21:06:66894] DEBUG 17100 --- [ionShutdownHook] igServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@11ef1c53, started on Fri Nov 15 18:20:00 KST 2024
-[2024-11-15 18:21:06:66896] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147482623
-[2024-11-15 18:21:06:66897] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerGracefulShutdown' completed its stop procedure
-[2024-11-15 18:21:06:66903] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase 2147481599
-[2024-11-15 18:21:06:66948] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'webServerStartStop' completed its stop procedure
-[2024-11-15 18:21:06:66948] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Stopping beans in phase -2147483647
-[2024-11-15 18:21:06:66948] DEBUG 17100 --- [ionShutdownHook] o.s.c.s.DefaultLifecycleProcessor    : Bean 'springBootLoggingLifecycle' completed its stop procedure
