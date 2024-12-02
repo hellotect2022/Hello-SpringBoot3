@@ -1,17 +1,15 @@
 package com.dhhan.demo.filter;
 
+import com.dhhan.customFramework.utils.LogHelper;
 import com.dhhan.demo.utils.JwtHelper;
-import com.dhhan.demo.utils.LogHelper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.List;
 
 // Filter 는 tomcat servlet container 단에서 처리하는 로직임
 // OncePerRequestFilter 각 요청에 대해 한 번만 실행
