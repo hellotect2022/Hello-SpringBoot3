@@ -1,9 +1,11 @@
 package com.dhhan.demo.controller;
 
+import com.dhhan.customFramework.redis.PubSub;
 import com.dhhan.demo.dto.MemoryInfo;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
 import com.dhhan.demo.utils.LogHelper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,8 +17,19 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/test")
 public class TestController {
+
+    @Autowired
+    PubSub pubSub;
+
     @GetMapping("/hello")
     public CustomResponse helloWorld() {
+        return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!");
+    }
+
+    @GetMapping("/redis")
+    public CustomResponse redis() {
+        long result = pubSub.publish("test","messsssss");
+        LogHelper.info("result = " + result,this);
         return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!");
     }
 

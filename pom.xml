@@ -96,6 +96,13 @@
 			<version>2.6.0</version>
 		</dependency>
 
+		<!-- CUSTOM MODULE -->
+		<dependency>
+			<groupId>com.dhhan</groupId>
+			<artifactId>customFramework</artifactId>
+			<version>0.0.1</version> <!-- 사용하는 Spring 버전에 맞춰 버전 선택 -->
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 
-    <property name="LOG_LEVEL" value="DEBUG"/>
+    <property name="LOG_LEVEL" value="INFO"/>
     <!-- FILE, STDOUT, BOTH    -->
     <property name="LOG_TYPE" value="BOTH"/>
 
