@@ -1,11 +1,13 @@
 package com.dhhan.demo.controller;
 
 import com.dhhan.demo.controller.openapi.SampleInterfaceOpenApi;
+import com.dhhan.demo.dto.LoginDTO;
 import com.dhhan.demo.dto.MemoryInfo;
 import com.dhhan.demo.dto.SampleDTO;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
 import com.dhhan.demo.utils.LogHelper;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -15,8 +17,8 @@ import java.util.HashMap;
 @RequestMapping("/sample")
 public class SampleController implements SampleInterfaceOpenApi {
     @GetMapping("/hello/{number}")
-    public CustomResponse helloWorld(@PathVariable String number) {
-        return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!"+number);
+    public CustomResponse helloWorld(@AuthenticationPrincipal LoginDTO loginDTO, @PathVariable String number) {
+        return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!"+loginDTO.getName());
     }
 
     @PostMapping("/hello2")

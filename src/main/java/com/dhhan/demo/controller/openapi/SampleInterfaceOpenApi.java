@@ -1,5 +1,6 @@
 package com.dhhan.demo.controller.openapi;
 
+import com.dhhan.demo.dto.LoginDTO;
 import com.dhhan.demo.dto.SampleDTO;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
@@ -11,6 +12,7 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
 @Tag(name = "컨트롤러를 태그로 관리가능", description="짧은 설명문을 추가")
 public interface SampleInterfaceOpenApi {
@@ -22,7 +24,7 @@ public interface SampleInterfaceOpenApi {
                     @Parameter(name = "number", description = "parameter", required = true, schema = @Schema(defaultValue = "1000"))
             }
     )
-    public CustomResponse helloWorld(String number);
+    public CustomResponse helloWorld(LoginDTO loginDTO, String number);
 
 
     @RequestBody(
