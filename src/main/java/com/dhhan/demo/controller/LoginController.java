@@ -37,8 +37,7 @@ public class LoginController {
         // JWT 생성
         String token = JwtHelper.createToken(name,nickname,email);
 
-
-        return new CustomResponse(CustomStatus.SUCCESS,token);
+        return CustomResponse.success(token);
     }
 
 }

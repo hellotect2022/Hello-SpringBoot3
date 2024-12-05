@@ -16,17 +16,17 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/sample")
 public class SampleController implements SampleInterfaceOpenApi {
-    @GetMapping("/hello/{number}")
+    @RequestMapping(value = "/hello/{number}", method = RequestMethod.GET)
     public CustomResponse helloWorld(@AuthenticationPrincipal LoginDTO loginDTO, @PathVariable String number) {
-        return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!"+loginDTO.getName());
+        return CustomResponse.success("Hello world!!"+loginDTO.getName());
     }
 
-    @PostMapping("/hello2")
+    @RequestMapping(value = "/hello2", method =RequestMethod.POST)
     public CustomResponse helloWorld2(@RequestBody SampleDTO sampleDTO) {
-        return new CustomResponse(CustomStatus.SUCCESS,sampleDTO);
+        return CustomResponse.success(sampleDTO);
     }
 
-    @GetMapping("/memory")
+    @RequestMapping(value = "/memory", method = RequestMethod.GET)
     public @ResponseBody CustomResponse showMemoryInfo() {
 
         MemoryInfo test0 = new MemoryInfo(Runtime.getRuntime());
@@ -53,11 +53,11 @@ public class SampleController implements SampleInterfaceOpenApi {
         LogHelper.info(test00,this);
         LogHelper.info(test1,this);
         LogHelper.info(test2,this);
-        return new CustomResponse(CustomStatus.SUCCESS,test0);
+        return CustomResponse.success(test0);
 
     }
 
-    @GetMapping("/error")
+    @RequestMapping(value = "/error", method = RequestMethod.GET)
     public void error() {
         throw new RuntimeException();
     }

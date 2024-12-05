@@ -23,26 +23,27 @@ import org.springframework.web.filter.CorsFilter;
 public class SecurityConfig {
 
     private static final String[] AUTH_WHITELIST = {
-            "/api/v1/member/**", "/swagger-ui/**","/swagger" ,"/api-docs",
-            "/v3/api-docs/**", "/api-docs/**", "/api/v1/auth/**", "/login","/api-docs/swagger-config","/test/**"
+//            "/api/v1/member/**", "/swagger-ui/**","/swagger" ,"/api-docs",
+//            "/v3/api-docs/**", "/api-docs/**", "/api/v1/auth/**", "/login","/api-docs/swagger-config","/test/**"
+            "/*"
     };
 
     @Bean
+    @Order(1)
     public SecurityFilterChain privateSecurityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable()) // CSRF 비활성화 (API 사용시)
                 .cors(Customizer.withDefaults())
                 .formLogin(form->form.disable()) // form login disable
-                .httpBasic(args->args.disable()) // basichttp 비뢀성화
+                .httpBasic(httpBasic->httpBasic.disable()) // basichttp 비뢀성화
                 .sessionManagement(sessionManagement -> sessionManagement
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // session 관리 X
                 .authorizeHttpRequests(authorize->authorize
                         .requestMatchers(AUTH_WHITELIST).permitAll()
-                        .anyRequest().authenticated() // 그 외 요청은 인증 필요
+                        //.anyRequest().authenticated()
+                        .anyRequest().permitAll() // 그 외 요청은 인증 필요
                 )
-                .addFilterAfter(new JwtAuthFilter(), CorsFilter.class)
-        ;
-
+                .addFilterBefore(new JwtAuthFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 

@@ -8,6 +8,7 @@ import com.dhhan.demo.dto.type.CustomStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,19 +22,19 @@ public class TestController {
     @Autowired
     PubSub pubSub;
 
-    @GetMapping("/hello")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public CustomResponse helloWorld() {
         return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!");
     }
 
-    @GetMapping("/redis")
+    @RequestMapping(value = "/redis", method = RequestMethod.GET)
     public CustomResponse redis() {
         long result = pubSub.publish("test","messsssss");
         LogHelper.info("result = " + result,this);
         return new CustomResponse(CustomStatus.SUCCESS,"Hello world!!");
     }
 
-    @GetMapping("/memory")
+    @RequestMapping(value = "/memory", method = RequestMethod.GET)
     public @ResponseBody CustomResponse showMemoryInfo() throws IllegalAccessException {
         MemoryInfo test0 = new MemoryInfo(Runtime.getRuntime());
         HashMap<String, Object> test00 = new HashMap<String, Object>();
@@ -63,7 +64,7 @@ public class TestController {
 
     }
 
-    @GetMapping("/error")
+    @RequestMapping(value = "/error", method = RequestMethod.GET)
     public @ResponseBody void error() throws Exception {
         throw new Exception();
     }
