@@ -6,9 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 @SpringBootApplication
-@ComponentScans(
-		@ComponentScan("com.dhhan.customFramework")
-)
 public class DemoApplication {
 
 	public static void main(String[] args) {

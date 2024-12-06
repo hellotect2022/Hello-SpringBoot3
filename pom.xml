@@ -102,14 +102,6 @@
 			<artifactId>customFramework</artifactId>
 			<version>0.0.1</version> <!-- 사용하는 Spring 버전에 맞춰 버전 선택 -->
 		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.36</version>
-			<scope>provided</scope>
-		</dependency>
-
 	</dependencies>
 	<build>
 		<plugins>
