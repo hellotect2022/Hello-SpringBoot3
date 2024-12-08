@@ -1,16 +1,13 @@
 package com.dhhan.demo.controller;
 
 import com.dhhan.customFramework.redis.PubSub;
+import com.dhhan.customFramework.redis.RedisRepository;
 import com.dhhan.customFramework.utils.LogHelper;
 import com.dhhan.demo.dto.MemoryInfo;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.dto.type.CustomStatus;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +18,9 @@ public class TestController {
 
     @Autowired
     PubSub pubSub;
+
+    @Autowired
+    RedisRepository redisRepository;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public CustomResponse helloWorld() {
@@ -63,6 +63,18 @@ public class TestController {
         return new CustomResponse(CustomStatus.SUCCESS,test0);
 
     }
+
+    @RequestMapping(value = "/set/{value}", method = RequestMethod.GET)
+    public @ResponseBody CustomResponse redisSet(@PathVariable String value) throws Exception {
+        redisRepository.setString("test",value);
+        return CustomResponse.success("redis set: "+value);
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public @ResponseBody CustomResponse redisGet() throws Exception {
+        return CustomResponse.success("redis get: "+redisRepository.getString("test"));
+    }
+
 
     @RequestMapping(value = "/error", method = RequestMethod.GET)
     public @ResponseBody void error() throws Exception {

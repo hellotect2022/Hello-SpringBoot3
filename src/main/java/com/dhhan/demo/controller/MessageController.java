@@ -1,7 +1,7 @@
 package com.dhhan.demo.controller;
 
-import com.dhhan.customFramework.utils.LogHelper;
-import com.dhhan.demo.dto.MessageDTO;
+import com.dhhan.customFramework.redis.RedisRepository;
+import com.dhhan.demo.dto.chatting.MessageDTO;
 import com.dhhan.demo.dto.response.CustomResponse;
 import com.dhhan.demo.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,8 @@ public class MessageController {
 
     @RequestMapping(value = "/send", method = RequestMethod.POST)
     public CustomResponse sendMessage(@RequestBody MessageDTO messageDTO) throws Exception {
-
-        try {
-            messageService.sendMessage(messageDTO);
-        }catch (Exception e) {
-            LogHelper.error(e);
-            throw e;
-        }
-
+        messageService.sendMessage(messageDTO);
         return CustomResponse.success(null);
     }
+
 }

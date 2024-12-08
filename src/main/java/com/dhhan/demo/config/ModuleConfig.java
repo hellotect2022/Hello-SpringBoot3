@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@Import(RedisConfig.class)
+//@Import(RedisConfig.class)
 public class ModuleConfig {
     @Bean
     public PubSub pubsub() {return new PubSub();}

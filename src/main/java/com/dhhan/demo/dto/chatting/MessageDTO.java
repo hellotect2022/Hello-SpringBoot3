@@ -1,4 +1,4 @@
-package com.dhhan.demo.dto;
+package com.dhhan.demo.dto.chatting;
 
 import com.dhhan.demo.dto.type.RoomType;
 
@@ -11,7 +11,7 @@ public class MessageDTO {
     private String targetId;
     private String message;
     private String roomId;
-    protected RoomType roomType;
+    private RoomType roomType;
     private Timestamp sendTime;
     private int unreadCnt;
 

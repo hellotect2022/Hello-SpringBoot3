@@ -1,0 +1,16 @@
+# room 저장하는 방식
+#redis
+room:roomId  //  사용자 room 저옵
+roomType
+roomID
+
+
+create room
+delete room
+get room
+
+# channel
+
+# token:userId
+
+
