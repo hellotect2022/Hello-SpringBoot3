@@ -10,24 +10,23 @@ body {
     color: #fff;
 }
 
-.login-container {
+.signup-container {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 30px 40px;
+    padding: 20px 40px;
     max-width: 400px;
     width: 100%;
     text-align: center;
     color: #333;
 }
 
-.logo h1 {
+h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #2575fc;
 }
 
-.input-field {
+.form-group {
     margin-bottom: 15px;
     text-align: left;
 }
@@ -54,42 +53,18 @@ input:focus {
     box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
 }
 
-.button {
-    margin-top: 10px;
+.submit-btn {
+    background: #2575fc;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
     transition: background 0.3s;
+    width: 100%;
 }
 
-.login-btn {
-    background: #2575fc;
-    color: #fff;
-}
-
-.login-btn:hover {
+.submit-btn:hover {
     background: #6a11cb;
-}
-
-.google-btn {
-    background: #dc4e41;
-    color: #fff;
-}
-
-.google-btn:hover {
-    background: #b33228;
-}
-
-.link {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #2575fc;
-    cursor: pointer;
-}
-
-.link:hover {
-    text-decoration: underline;
 }
