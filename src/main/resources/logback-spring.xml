@@ -7,9 +7,9 @@
 
 
     <property name="CONSOLE_PATTERN"
-              value="[%d{yyyy-MM-dd HH:mm:ss}:%-3relative]  %highlight(%-5level) %highlight(${PID:-}){magenta} %highlight(---){faint} %highlight([%15.15thread]){faint} %highlight(%logger{36}){cyan} %highlight(:){faint} %msg%n"/>
+              value="[%d{yyyy-MM-dd HH:mm:ss}:%-3relative]  %highlight(%-5level) %highlight(${PID:-}){magenta} %highlight(---){faint} %highlight([%5.5thread]){faint} %highlight(%logger{36}){cyan} %highlight(:){faint} %msg%n"/>
     <property name="FILE_PATTERN"
-              value="[%d{yyyy-MM-dd HH:mm:ss}:%-3relative] %-5level ${PID:-} --- [%15.15thread] %-36.36logger{36} : %msg%n"/>
+              value="[%d{yyyy-MM-dd HH:mm:ss}:%-3relative] %-5level ${PID:-} --- [%5.5thread] %-36.36logger{36} : %msg%n"/>
 
     <property name="FILE_NAME" value="D:\\logs\\application.log" />
     <property name="LOG_NAME_PATTERN" value="./logs/application-%d{yyyy-MM-dd-HH-mm}.%i.log" />
