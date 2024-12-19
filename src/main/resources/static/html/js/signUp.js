@@ -1,23 +1,11 @@
 document.getElementById('signupForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-//    fetch("localhost:8111/login")
-//        .then(response => {
-//          if (!response.ok) {
-//            throw new Error(`HTTP error! status: ${response.status}`);
-//          }
-//          return response.json(); // JSON 데이터를 파싱
-//        })
-//        .then(data => {
-//          console.log(data); // 응답 데이터 처리
-//        })
-//        .catch(error => {
-//          console.error('There was an error!', error);
-//        });
     const form = document.getElementById('signupForm');
-    fetch("http://10.10.27.18:8111/login", {
+    fetch("http://10.10.27.18:8111/na/nf/signUp", {
       method: 'POST', // HTTP 메서드
       headers: {
+        'Device-Type' : 'pc',
         'Content-Type': 'application/json' // JSON 형식으로 보낼 경우
       },
       body: formToJSON(form) // 데이터를 JSON으로 변환
@@ -30,12 +18,16 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
       })
       .then(data => {
         console.log('Response:', data);
+        if (data.status == "SUCCESS") {
+            alert(data.data);
+            localStorage.setItem('token', data.data);
+        }else {
+            alert(`[${data.errorCode}] `+ data.errorMessage)
+        }
       })
       .catch(error => {
         console.error('There was an error!', error);
       });
-
-    alert('회원가입이 완료되었습니다!');
 });
 
 // API URL

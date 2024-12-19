@@ -44,17 +44,16 @@ public class JwtHelper {
         this.staticAccessTokenExpTime = accessTokenExpTime;
     }
 
-    public static String createToken(String username,String nickname,String email) {
+    public static String createToken(String name,String userId,String email) {
         Instant now = Instant.now(); // 현재 시간
         Instant tokenValidity = now.plusSeconds(staticAccessTokenExpTime); // 만료 시간 계산
 
         // claim 은 JWT 의 payload 에 해당하는 부분
-        Map<String, Object> claims = Map.of("sub", username,"nickname", nickname,"email", email);
+        Map<String, Object> claims = Map.of("name", name,"userId", userId,"email",email);
 
         // JWT 생성
         return Jwts.builder()
                 .setClaims(claims)                           // JWT 의 payload 에 포함될 데이터를 설정
-                //.setSubject(username)                        // 사용자 정보 설정
                 .setIssuedAt(Date.from(now))                 // 발행 시간
                 .setExpiration(Date.from(tokenValidity))     // 만료 시간
                 .signWith(key)                               // 서명
@@ -102,17 +101,25 @@ public class JwtHelper {
         }
     }
 
+    public static Claims hashingToken(String token) {
+        return Jwts.parser()
+                .setSigningKey(key) // 서명 키 설정
+                .build()
+                .parseClaimsJws(token)
+                .getPayload();
+    }
+
     // 헤더에서 토큰 추출
     public static String resolveToken(HttpServletRequest request) {
-        String bearerToken = request.getHeader("dhhan_token");
-        if (bearerToken != null) {
-            return bearerToken;
-        }
-        return null;
-//        String bearerToken = request.getHeader("Authorization");
-//        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
-//            return bearerToken.substring(7); // "Bearer " 이후의 토큰 반환
+//        String bearerToken = request.getHeader("dhhan_token");
+//        if (bearerToken != null) {
+//            return bearerToken;
 //        }
 //        return null;
+        String bearerToken = request.getHeader("Authorization");
+        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7); // "Bearer " 이후의 토큰 반환
+        }
+        return null;
     }
 }

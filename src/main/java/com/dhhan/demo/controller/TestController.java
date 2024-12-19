@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/na/nf/test")
 public class TestController {
 
     @Autowired
@@ -66,13 +66,13 @@ public class TestController {
 
     @RequestMapping(value = "/set/{value}", method = RequestMethod.GET)
     public @ResponseBody CustomResponse redisSet(@PathVariable String value) throws Exception {
-        redisRepository.setString("test",value);
+        redisRepository.set("test",value);
         return CustomResponse.success("redis set: "+value);
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     public @ResponseBody CustomResponse redisGet() throws Exception {
-        return CustomResponse.success("redis get: "+redisRepository.getString("test"));
+        return CustomResponse.success("redis get: "+redisRepository.get("test"));
     }
 
 

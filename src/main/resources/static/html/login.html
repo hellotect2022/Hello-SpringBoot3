@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 페이지</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <div class="login-container">
@@ -13,17 +13,17 @@
     </div>
     <div class="input-field">
         <label for="id">ID 입력</label>
-        <input type="text" id="id" placeholder="ID를 입력하세요">
+        <input type="text" id="id" placeholder="ID를 입력하세요" value="tester">
     </div>
     <div class="input-field">
         <label for="password">Password 입력</label>
-        <input type="password" id="password" placeholder="비밀번호를 입력하세요">
+        <input type="password" id="password" placeholder="비밀번호를 입력하세요" value="1234">
     </div>
     <button class="button" onclick="login()">로그인</button>
     <button class="button" style="background-color: #dc4e41;" onclick="googleSSO()">구글 SSO</button>
     <p class="link" onclick="goToSignup()">회원가입</p>
 </div>
 
-<script src="../js/login.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

@@ -14,12 +14,12 @@ public class CustomResponse<T> {
     public CustomResponse(CustomStatus status, T data) {
         this.status = status;
         this.data = data;
-    }
-
-    CustomResponse(CustomStatus status, CustomErrorCode errorCode) {
-        this.status = status;
-        this.errorCode = errorCode;
-        this.errorMessage = errorCode.getErrorMessage();
+        if (data instanceof CustomErrorCode) {
+            this.errorCode = (CustomErrorCode) data;
+            this.errorMessage = this.errorCode.getErrorMessage();
+        } else {
+            this.data = data;
+        }
     }
 
     public static <T> CustomResponse<T> success(T data) {

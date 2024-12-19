@@ -3,6 +3,8 @@ package com.dhhan.demo.dto;
 
 public class LoginDTO {
     private String name;
+    private String userId;
+    private String passwd;
     private String nickName;
     private String email;
 
@@ -28,5 +30,21 @@ public class LoginDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getPasswd() {
+        return passwd;
+    }
+
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
     }
 }
