@@ -2,7 +2,7 @@ async function fetchAndUpdateMessage() {
     try {
     // JWT token 가져오기
         const token = localStorage.getItem('token')
-        const response = await fetch('http://10.10.27.18:8111/room/users', {
+        const response = await fetch('http://10.10.27.18:8111/user/getAll', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -18,7 +18,6 @@ async function fetchAndUpdateMessage() {
             throw new Error(`Error: ${response.status}`);
         }
 
-        if
 
         const data = await response.json();
         const messageElement = document.getElementById('message');
