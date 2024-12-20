@@ -1,6 +1,7 @@
-package com.dhhan.demo.dto.chatting;
+package com.dhhan.demo.dto;
 
 import com.dhhan.demo.dto.type.RoomType;
+import org.springframework.util.StringUtils;
 
 
 import java.sql.Timestamp;
@@ -57,7 +58,7 @@ public class MessageDTO {
     }
 
     public RoomType getRoomType() {
-        return roomType;
+        return StringUtils.isEmpty(roomType) ? RoomType.Solo : roomType;
     }
 
     public void setRoomType(RoomType roomType) {

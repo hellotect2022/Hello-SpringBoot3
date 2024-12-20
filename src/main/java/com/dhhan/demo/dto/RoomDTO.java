@@ -1,4 +1,4 @@
-package com.dhhan.demo.dto.chatting;
+package com.dhhan.demo.dto;
 
 import com.dhhan.demo.dto.type.RoomType;
 

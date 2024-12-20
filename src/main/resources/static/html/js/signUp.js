@@ -20,7 +20,6 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         console.log('Response:', data);
         if (data.status == "SUCCESS") {
             alert(data.data);
-            localStorage.setItem('token', data.data);
         }else {
             alert(`[${data.errorCode}] `+ data.errorMessage)
         }

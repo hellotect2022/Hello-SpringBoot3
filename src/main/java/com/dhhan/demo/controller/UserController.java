@@ -24,6 +24,6 @@ public class UserController {
 
         Set<String> userkeys = redisRepository.getKeysByPattern("user:*");
         List<UserDTO> users = redisRepository.mget(userkeys.stream().toList(), UserDTO.class);
-        return CustomResponse.success("사용자 목록 호출함 ㅋㅋㅋ");
+        return CustomResponse.success(users);
     }
 }

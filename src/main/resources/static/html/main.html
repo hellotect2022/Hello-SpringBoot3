@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Maini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Components</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>Loading...</h1>
-    <h3 id="message"></h3>
-
+<div class="mobile-frame">
+    <div class="container" id="content">
+        <div class="container-component" id="component">
+        </div>
+        <div class="navbar">
+            <button class="nav-btn active" data-tab="home">홈</button>
+            <button class="nav-btn" data-tab="room">채팅방</button>
+            <button class="nav-btn" data-tab="settings">설정</button>
+        </div>
+    </div>
+    <div class="container-chat" id="chat">
+    </div>
+</div>
+<script type="module" src="js/components/home.js"></script>
+<script type="module" src="js/components/room.js"></script>
+<script type="module" src="js/components/setting.js"></script>
+<script type="module" src="js/components/chat.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
-<script src="js/main.js"></script>
 </html>

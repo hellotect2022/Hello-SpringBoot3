@@ -21,6 +21,7 @@ function login() {
             if (data.status == "SUCCESS") {
                 alert(data.data);
                 localStorage.setItem('token', data.data);
+                localStorage.setItem('accessId', id);
                 window.location.href = "/html/main.html";
             }else {
                 alert(`[${data.errorCode}] `+ data.errorMessage)
