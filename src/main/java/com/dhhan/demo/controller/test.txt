@@ -1,16 +1,22 @@
-# room 저장하는 방식
-#redis
-room:roomId  //  사용자 room 저옵
-roomType
-roomID
 
+1. 사용자 참여 채팅방 목록
+SADD user:{userId}:chatrooms {chatroomId1} {chatroomId2}
 
-create room
-delete room
-get room
+2. 사용자 해시 예시
+HSET user:{userId}
 
-# channel
+3. 채팅방 정보
+HSET chatroom:{chatroomId}
+type   "SOLO"
+title  "1:1 Chat"
+createdAt  2024-12-24T12:34:56
 
-# token:userId
+4. 채팅방별 참여자 목록
+SADD chatroom:{chatroomId}:participants {userId1} {userId2}
 
+5. 메세지 구조
+RPUSH chatroom:{chatroomId}:messages {messageId}
 
+HSET message:{messageId}  sender    "user123"
+                          content   "Hello"
+                          timestamp 1695671234567

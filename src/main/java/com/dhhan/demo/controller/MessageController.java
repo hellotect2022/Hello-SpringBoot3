@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
@@ -31,20 +34,29 @@ public class MessageController {
 
         if (StringUtils.isEmpty(messageDTO.getRoomId())) {
             String roomId = UUID.randomUUID().toString();
-
-            // 1. redis rooms:userId 에 rooms 에 hset 으로 넣는다.
-            Set<String> rooms = new HashSet<>();
-            Optional<String> tmp = redisRepository.hget("rooms:" + messageDTO.getSenderId(), messageDTO.getRoomType().toString());
-            tmp.ifPresent(roomStrinig -> rooms.addAll(Arrays.stream(roomStrinig.split(",")).toList()));
-            rooms.add(roomId);
-            redisRepository.hset("rooms:"+messageDTO.getSenderId(),messageDTO.getRoomType().toString(),rooms);
+            ///// 채팅방에 대한 정보(나중에 객체로 변환) //////////////
+            Map<String,Object> roomObject = new HashMap<>();
+            roomObject.put("roomId", roomId);
+            roomObject.put("roomType", messageDTO.getRoomType().toString());
+            roomObject.put("title", "1:1 Chat");
+            roomObject.put("createdAt", new Date());
+            ///// ////////////// //////////////////////////////
+            // 1. REDIS HSET chatroom:{chatroomId} 으로 채팅방 개설 함
+            redisRepository.hsetAll("chatroom:"+roomId,roomObject);
+            messageDTO.setRoomId(roomId);
         }
 
-        // 2. redis room:members:uuid 에 set 타입으로 사용자들을 넣는다.
+        // 2. SADD user:{userId}:chatrooms {chatroomId1} {chatroomId2} (사용자별 참여된 채팅방 목록 추가)
+        redisRepository.sadd("user:"+messageDTO.getSenderId()+":chatroom", messageDTO.getRoomId());
+        redisRepository.sadd("user:"+messageDTO.getTargetId()+":chatroom", messageDTO.getRoomId());
 
-        // 3. redis room:uuid 에 hash-set 로 메세지를 넣는다.
+        // 3. 채팅방별 참여자 목록 추가
+        Set<String> members = new HashSet<String>();
+        members.addAll(Arrays.asList(messageDTO.getSenderId(), messageDTO.getTargetId()));
+        redisRepository.sadd("chatroom:"+messageDTO.getRoomId()+":participants",members.toArray());
 
-        // 3. redis room:order:uuid 에 list 로 uuid 집어넣는다.
+        ///????
+
 
         messageService.sendMessage(messageDTO);
         return CustomResponse.success(null);
