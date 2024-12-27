@@ -50,6 +50,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                         //.anyRequest().permitAll() // 그 외 요청은 인증 필요
                 )
+                .anonymous(anonymous->anonymous.disable())
                 .addFilterBefore(new JwtAuthFilter(redisRepository), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

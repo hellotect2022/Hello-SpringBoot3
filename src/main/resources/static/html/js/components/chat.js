@@ -31,8 +31,9 @@ async function sendMessage(params) {
         throw new Error(`Error: ${response.status}`);
     }
 
-    const data = await response.json();
-    console.log('/message/send return ->',data)
+    const result = await response.json();
+    console.log('/message/send return ->',result);
+    document.querySelector("#chat-room-id").value=result.data.roomId;
     input.value = "";
 }
 
@@ -57,8 +58,8 @@ const ChatComponent = {
   onMount(params) {
     const ptag = document.querySelector("#chat-view-header") // 채팅방 이름
     ptag.innerText = params.userName + "님과 대화"
-
-    document.querySelector("#chat-room-id").value = params.roomId ? params.roomId:0;
+    console.log("와우 이건 뭐 ...",params.roomId,params)
+    document.querySelector("#chat-room-id").value = params.roomId ? params.roomId:'';
 
     const backButton = document.querySelector("#back-btn");    // 뒤로가기 버튼
     const sendButton = document.querySelector("#send-btn");    // 메세지 보내기 버튼

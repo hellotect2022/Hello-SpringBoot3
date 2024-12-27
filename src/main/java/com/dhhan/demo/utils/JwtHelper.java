@@ -1,5 +1,6 @@
 package com.dhhan.demo.utils;
 
+import com.dhhan.customFramework.utils.JsonHelper;
 import com.dhhan.customFramework.utils.LogHelper;
 import com.dhhan.demo.dto.LoginDTO;
 import io.jsonwebtoken.Claims;
@@ -63,29 +64,21 @@ public class JwtHelper {
     // 토큰에서 인증 정보 추출
     public static Authentication getAuthentication(String token) {
         // 1. JWT에서 사용자명 추출
-        String username = getUsernameFromToken(token);
-        LogHelper.info("Authenticated user ID: "+username,JwtHelper.class);
+        String tokenBody = getBodyFromToken(token);
+        LogHelper.info("Authenticated user ID: "+tokenBody,JwtHelper.class);
 
-        // 2. 사용자명으로 UserDetails 조회 (사용자 권한 포함)
-        //UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-
-        // 3. UsernamePasswordAuthenticationToken 생성 (사용자명, null, 권한 목록)
-        // return new UsernamePasswordAuthenticationToken(username, null, AuthorityUtils.NO_AUTHORITIES);
-
-        LoginDTO loginDTO = new LoginDTO();
-        loginDTO.setName(username);
         // UsernamePasswordAuthenticationToken(Object principal == @AuthenticationPrincipal 에 들어갈 값)
-        return new UsernamePasswordAuthenticationToken(loginDTO, null, AuthorityUtils.NO_AUTHORITIES);
+        return new UsernamePasswordAuthenticationToken(JsonHelper.convertToClass(tokenBody,LoginDTO.class), null, AuthorityUtils.NO_AUTHORITIES);
     }
 
     // 토큰에서 사용자 이름 추출
-    public static String getUsernameFromToken(String token) {
+    public static String getBodyFromToken(String token) {
         Claims claims = Jwts.parser()
                 .setSigningKey(key) // 서명 키 설정
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
-        return claims.getSubject();
+        return JsonHelper.parseObjectToJson(claims);
     }
 
     // 토큰 유효성 검사

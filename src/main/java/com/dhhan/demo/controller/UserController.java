@@ -22,7 +22,7 @@ public class UserController {
     @RequestMapping(value = "/getAll", method = RequestMethod.POST)
     public CustomResponse getUsers(HttpServletRequest request) throws Exception {
 
-        Set<String> userkeys = redisRepository.getKeysByPattern("user:*");
+        Set<String> userkeys = redisRepository.getKeysByPattern("user:*:info");
         List<UserDTO> users = redisRepository.mget(userkeys.stream().toList(), UserDTO.class);
         return CustomResponse.success(users);
     }

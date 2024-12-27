@@ -80,4 +80,6 @@ public class MessageDTO {
     public void setUnreadCnt(int unreadCnt) {
         this.unreadCnt = unreadCnt;
     }
+
+
 }
